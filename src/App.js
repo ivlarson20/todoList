@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
-import TodoList from './components/TodoList';
-import AddTodo from './components/AddTodo';
+import TodoList from './TodoList';
+import AddTodo from './AddTodo';
 
 const App = () => {
   const [todos, setTodos] = useState([]);
@@ -9,7 +9,7 @@ const App = () => {
     setTodos([...todos, { text, completed: false }]);
   };
 
-  const toggleTodos = (index) => {
+  const toggleTodo = (index) => {
     const newTodos = [...todos];
     newTodos[index].completed = !newTodos[index].completed;
     setTodos(newTodos);
